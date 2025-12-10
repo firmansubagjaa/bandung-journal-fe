@@ -1,0 +1,86 @@
+/* Print Styles */
+@media print {
+  /* Hide non-essential elements */
+  header,
+  footer,
+  nav,
+  aside,
+  .no-print,
+  button,
+  [role="navigation"],
+  [role="complementary"] {
+    display: none !important;
+  }
+
+  /* Optimize article layout */
+  article,
+  main {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 1cm !important;
+  }
+
+  /* Typography for print */
+  body {
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    color: black !important;
+    background: white !important;
+  }
+
+  h1 {
+    font-size: 24pt !important;
+    page-break-after: avoid !important;
+  }
+
+  h2 {
+    font-size: 18pt !important;
+    page-break-after: avoid !important;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+    page-break-after: avoid !important;
+  }
+
+  /* Avoid page breaks inside elements */
+  p,
+  blockquote,
+  pre,
+  img {
+    page-break-inside: avoid !important;
+  }
+
+  /* Remove borders and shadows */
+  * {
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Show links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Code blocks */
+  pre,
+  code {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+  }
+}
