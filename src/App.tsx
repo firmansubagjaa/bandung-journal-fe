@@ -21,6 +21,8 @@ import { ContactPage } from "@/pages/ContactPage";
 import { SearchPage } from "@/pages/SearchPage";
 import { BookmarksPage } from "@/pages/BookmarksPage";
 import { CategoryDetailPage } from "@/pages/CategoryDetailPage";
+import { TrendingPage } from "@/pages/TrendingPage";
+import { JustPublishedPage } from "@/pages/JustPublishedPage";
 
 import { ProfilePage } from "@/pages/ProfilePage";
 import { TermsPage } from "@/pages/TermsPage";
@@ -43,6 +45,8 @@ function App() {
             <Route element={<MainLayout />}>
               <Route path="/" element={<HomePage />} />
               <Route path="/articles" element={<ArticlesPage />} />
+              <Route path="/trending" element={<TrendingPage />} />
+              <Route path="/just-published" element={<JustPublishedPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/verify-email" element={<VerifyEmailPage />} />
